@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var searchResults: [Track] = []
     let queryService = QueryService()
+    let downloadService = DownloadService()
 
     override func viewDidLoad() {
         super.viewDidLoad()

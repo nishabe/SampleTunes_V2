@@ -75,12 +75,16 @@
                                                     <rect key="frame" x="267" y="11" width="93" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Download"/>
+                                                    <connections>
+                                                        <action selector="downloadTapped:" destination="Gy5-8u-WH2" eventType="touchUpInside" id="nwE-tu-8A9"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artistLabel" destination="dCy-Oa-VwG" id="U5K-m3-gwX"/>
                                             <outlet property="cancelButton" destination="M2s-C8-VDm" id="Hb9-Fh-EKL"/>
+                                            <outlet property="downloadButton" destination="kWF-4f-8LJ" id="oQq-SK-C99"/>
                                             <outlet property="pauseButton" destination="ztw-BS-qMO" id="lwF-nu-dme"/>
                                             <outlet property="progressLabel" destination="TuF-q6-sRr" id="ZUI-1p-9Ys"/>
                                             <outlet property="progressView" destination="c2u-Pn-Mc1" id="VAu-QU-GaE"/>

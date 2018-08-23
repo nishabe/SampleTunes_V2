@@ -17,7 +17,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell_ID", for: indexPath) as! TrackCell
         let track = searchResults[indexPath.row]
-        cell.configure(track: track)
+        cell.delegate = self
+        cell.configure(track: track,downloaded:track.downloaded)
         return cell
     }
     

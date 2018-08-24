@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVKit
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,5 +25,31 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let track = searchResults[indexPath.row]
+        if track.downloaded {
+            playDownload(track)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: Private methods
+    func playDownload(_ track: Track) {
+        let playerViewController = AVPlayerViewController()
+        playerViewController.entersFullScreenWhenPlaybackBegins = true
+        playerViewController.exitsFullScreenWhenPlaybackEnds = true
+        present(playerViewController, animated: true, completion: nil)
+        let url = localFilePath(for: track.previewURL)
+        print("localPath:\(url)")
+        let player = AVPlayer(url: url)
+        playerViewController.player = player
+        player.play()
+    }
+    
+    func localFilePath(for url: URL) -> URL {
+        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documentsPath.appendingPathComponent(url.lastPathComponent)
     }
 }

@@ -14,8 +14,7 @@ extension SearchViewController: TrackCellDelegate {
         if let indexPath = tableView.indexPath(for: cell) {
             let track = searchResults[indexPath.row]
             downloadService.startDownload(track)
-            print("Download over")
-            track.downloaded = true
+            print("Remote url:\(track.previewURL)")
             reload(indexPath.row)
         }
     }

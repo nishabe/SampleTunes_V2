@@ -9,10 +9,9 @@
 import Foundation
 
 class DownloadService {
-
-    var downloadsSession = URLSession(configuration: URLSessionConfiguration.default) // Derfault urlsession
-    var activeDownloads: [URL: Download] = [:] // Dictionary to track the downloads. Key is the file url, which will be unique.
     
+    var activeDownloads: [URL: Download] = [:]
+    var downloadsSession = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
     func startDownload(_ track: Track) {
         let download = Download(track: track)
         download.task = downloadsSession.downloadTask(with: track.previewURL)

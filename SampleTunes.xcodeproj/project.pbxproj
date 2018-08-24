@@ -20,6 +20,7 @@
 		F824206C212F0FED00355ECE /* SearchViewController+TrackCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824206B212F0FED00355ECE /* SearchViewController+TrackCellDelegate.swift */; };
 		F824206E212F10A700355ECE /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824206D212F10A700355ECE /* DownloadService.swift */; };
 		F8242070212F230D00355ECE /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824206F212F230D00355ECE /* Download.swift */; };
+		F8242090212F59C300355ECE /* SearchViewController+URLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824208F212F59C300355ECE /* SearchViewController+URLSessionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F824206B212F0FED00355ECE /* SearchViewController+TrackCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+TrackCellDelegate.swift"; sourceTree = "<group>"; };
 		F824206D212F10A700355ECE /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		F824206F212F230D00355ECE /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		F824208F212F59C300355ECE /* SearchViewController+URLSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+URLSessionDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				F8242063212E3FAE00355ECE /* SearchViewController+SearchBarDelegate.swift */,
 				F8242069212E5A2C00355ECE /* SearchViewController+TableViewDelegate.swift */,
 				F824206B212F0FED00355ECE /* SearchViewController+TrackCellDelegate.swift */,
+				F824208F212F59C300355ECE /* SearchViewController+URLSessionDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				F824206A212E5A2C00355ECE /* SearchViewController+TableViewDelegate.swift in Sources */,
 				F8242066212E560100355ECE /* QueryService.swift in Sources */,
 				F824204B212E127700355ECE /* AppDelegate.swift in Sources */,
+				F8242090212F59C300355ECE /* SearchViewController+URLSessionDelegate.swift in Sources */,
 				F8242062212E25DD00355ECE /* TrackCell.swift in Sources */,
 				F8242068212E57BA00355ECE /* Track.swift in Sources */,
 				F824206C212F0FED00355ECE /* SearchViewController+TrackCellDelegate.swift in Sources */,

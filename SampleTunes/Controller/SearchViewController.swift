@@ -13,10 +13,15 @@ class SearchViewController: UIViewController {
     var searchResults: [Track] = []
     let queryService = QueryService()
     let downloadService = DownloadService()
-
+    lazy var downloadsSession: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        return URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        downloadService.downloadsSession = downloadsSession
     }
 }
 

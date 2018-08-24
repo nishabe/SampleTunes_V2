@@ -16,7 +16,6 @@ class DownloadService {
         let download = Download(track: track)
         download.task = downloadsSession.downloadTask(with: track.previewURL)
         download.task!.resume()
-        download.isDownloading = true
         activeDownloads[download.track.previewURL] = download
     }
 }
